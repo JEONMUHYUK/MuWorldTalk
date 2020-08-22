@@ -1,0 +1,64 @@
+.settings-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.settings-top button {
+  background-color: var(--background);
+  border: none;
+  font-size: 30px;
+}
+.settings-top button a {
+  color: black;
+}
+
+.settings-top button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.settings-fn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--background);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.settings-fn:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.settings-fn__title {
+  padding: 30px 10px;
+  align-items: flex-start;
+}
+
+.settings-fn__title span {
+  margin-left: 20px;
+}
+.settings-fn div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.settings-fn__p {
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.line {
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

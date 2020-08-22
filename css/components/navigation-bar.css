@@ -1,0 +1,60 @@
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--background);
+  padding: 20px 60px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.navigation-bar__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link {
+  color: #f1f2f6;
+}
+
+.nav__btn {
+  position: relative;
+}
+
+.nav__btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes notificationAni {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.nav__notification {
+  background-color: #ff6b81;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  animation: notificationAni 1s ease-in-out infinite;
+}
+
+.nav__dot {
+  display: flex;
+  width: 7px;
+  height: 7px;
+  background-color: #ff6b81;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+}

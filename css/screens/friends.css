@@ -1,0 +1,112 @@
+.names-display {
+  display: block;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 20px;
+  background-color: rgba(187, 141, 184, 0.1);
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.names-display:hover {
+  transform: scale(1.03);
+}
+
+.user-component__avatar1 {
+  width: 100px;
+  height: 100px;
+}
+.user-components__title {
+  font-weight: 600;
+}
+
+.screen-channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0px 25px;
+  padding: 25px 0px;
+  font-size: 18px;
+  opacity: 0.4;
+}
+
+.user-component__avatar2 {
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes musicAni {
+  0% {
+    background-color: rgba(237, 161, 137, 0.5);
+  }
+  25% {
+    background-color: rgba(225, 66, 117, 0.5);
+  }
+  50% {
+    background-color: rgba(187, 141, 184, 0.5);
+  }
+  75% {
+    background-color: rgba(186, 197, 213, 0.5);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.user-component__comment-music {
+  animation: musicAni 3s ease-in-out infinite;
+}
+
+@keyframes screenAni {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.firends-screen {
+  animation: screenAni 0.3s ease-in-out;
+}
+
+@keyframes opacityAni {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.splash-screen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  animation: opacityAni 2s ease-in-out forwards;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #ededed;
+}
+
+.loader {
+	max-width: 15rem;
+	width: 100%;
+	height: auto;
+	stroke-linecap: round;
+}
+
+.loader circle {
+	fill: none;
+	stroke-width: 3.5;

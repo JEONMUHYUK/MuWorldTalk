@@ -99,3 +99,118 @@
 .chat-comment-time--own {
   margin-right: 10px;
 }
+.message-input {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: #eff8ff;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.message-input__column:first-child {
+  width: 10%;
+}
+.message-input__column:first-child button {
+  background-color: #eff8ff;
+  border: none;
+  font-size: 25px;
+  color: #bac6d6;
+}
+
+.message-input__column:first-child button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.message-input__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.message-input input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: #eff8ff;
+  padding: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.message-input__column:last-child button {
+  position: absolute;
+  right: 40px;
+  top: 7px;
+  background-color: #eff8ff;
+  border: none;
+  font-size: 20px;
+  color: #bac6d6;
+  border-radius: 30px;
+}
+
+.message-input__column:last-child button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.message-input__column:last-child > button:last-child {
+  right: -5px;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  background-color: #bc8db9;
+  color: #645157;
+}
+
+@keyframes user-component__ani {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transition: none;
+    opacity: 1;
+  }
+}
+
+.user-component__ani {
+  animation: user-component__ani 1s ease-in-out forwards;
+  opacity: 0;
+}
+.user-component__ani:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.user-component__ani:nth-child(3) {
+  animation-delay: 1s;
+}
+.user-component__ani:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.user-component__ani:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.firends-screen-chat {
+  animation: none;
+}
+
+.message-input .message-input__column:first-child,
+.message-input button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.message-input:focus-within .message-input__column:first-child,
+.message-input:focus-within button {
+  opacity: 0;
+}
+.message-input:focus-within input {
+  width: 98vw;
+  transform: translateX(-12%) translateY(-80px);
+}
+
+.message-input:focus-within {
+  transform: translateY(80px);
+}
